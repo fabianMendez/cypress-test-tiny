@@ -1,6 +1,5 @@
 /// <reference types="cypress" />
-describe('page', () => {
-  it('works', () => {
-    cy.visit('https://example.cypress.io')
-  })
+it('Show ISO-8859 characters correctly', () => {
+	cy.visit('http://localhost:8000/test.html')
+	cy.contains('ñ', { timeout: 0 })
 })
